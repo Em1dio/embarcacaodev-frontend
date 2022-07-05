@@ -12,16 +12,19 @@
                     class="mx-auto"
                     v-for="(subcategoria, subIndex) in categoria.subCategorias"
                     :key="subIndex"
+                    @click="abrirModal(subcategoria.title)"
                 >
                     {{ subcategoria.title }}
                 </button-treasure>
             </div>
         </div>
     </div>
+    <modal></modal>
 </template>
 
 <script>
 import { useStore } from '@/stores/conteudo';
+import { useModalStore } from '@/stores/modals';
 
 export default {
     mounted() {
@@ -30,11 +33,15 @@ export default {
     data() {
         return {
             store: useStore(),
+            modal: useModalStore(),
         };
     },
     methods: {
         getConteudo(area) {
             this.store.getResultBy(area);
+        },
+        abrirModal(title) {
+            this.modal.showModal(title);
         },
     },
     computed: {

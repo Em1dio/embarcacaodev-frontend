@@ -1,7 +1,7 @@
 <template>
-    <div :class="`flex rounded-md items-center justify-center w-52 h-28 ${getBgColor}`">
-        <div class="absolute">
-            <div :class="getColor">
+    <div :class="`relative flex rounded-md items-center justify-center w-52 h-28 ${getBgColor}`">
+        <div>
+            <div :class="`${getColor}`">
                 <slot></slot>
             </div>
             <treasure-map class="treasure_map" />
@@ -19,7 +19,7 @@ export default {
     },
     computed: {
         getBgColor() {
-            switch(this.color) {
+            switch (this.color) {
                 case 'white':
                     return 'bg-white';
                 case 'blue':
@@ -28,7 +28,7 @@ export default {
             }
         },
         getColor() {
-            switch(this.color) {
+            switch (this.color) {
                 case 'white':
                     return 'text-blue-900';
                 case 'blue':
@@ -43,8 +43,8 @@ export default {
 <style scoped>
 .treasure_map {
     position: absolute;
-    left: 45px;
-    top: -30px;
+    bottom: 10px;
+    right: 10px;
 }
 
 </style>

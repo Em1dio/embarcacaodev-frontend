@@ -2,7 +2,7 @@
     <div class="flex flex-wrap">
         <div v-for="(area, index) in areas" :key="index">
             <a :href="area.link">
-                <card-area v-if="area.assuntos > 0" :assuntos="area.assuntos" :cardType="index % 2">
+                <card-area :assuntos="area.assuntos" :isNew="area.isNew" :cardType="index % 2">
                     {{ area.title }}
                 </card-area>
             </a>
@@ -11,32 +11,26 @@
 </template>
 
 <script>
+import { useStore } from '@/stores/conteudo';
+
 export default {
+    mounted() {
+        this.getAreas();
+    },
+    methods: {
+        getAreas() {
+            this.conteudo.getAreas();
+        },
+    },
     data() {
         return {
-            areas: [
-                {
-                    title: 'DEV. FRONTEND',
-                    assuntos: 1,
-                    link: '/onde-aprender/frontend',
-                },
-                {
-                    title: 'DEV. BACKEND',
-                    assuntos: 2,
-                    link: '/onde-aprender/backend',
-                },
-                {
-                    title: 'DEV. MOBILE',
-                    assuntos: 0,
-                    link: '/onde-aprender/mobile',
-                },
-                {
-                    title: 'GESTAO PROJETOS',
-                    assuntos: 0,
-                    link: '/onde-aprender/gestao-projetos',
-                },
-            ],
+            conteudo: useStore(),
         };
+    },
+    computed: {
+        areas() {
+            return this.conteudo.areas;
+        },
     },
 };
 </script>

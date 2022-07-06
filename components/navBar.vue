@@ -2,13 +2,13 @@
     <div class="bg-white bg-opacity-90">
         <nav class="container px-6 py-6 mx-auto md:flex md:justify-between md:items-center" fixed>
             <div class="flex items-center justify-between">
-                <nuxt-link
-                    to="/"
+                <a
+                    href="/"
                     class="flex items-center text-xl font-bold text-black md:text-2xl hover:text-white-400"
                 >
                     <logo class="mr-2" />
                     Embarcação<span class="text-sky-500">Dev</span>
-                </nuxt-link>
+                </a>
                 <!-- Mobile menu button -->
                 <div @click="showMenu = !showMenu" class="flex md:hidden">
                     <button
@@ -57,7 +57,7 @@ export default {
                     link: '/onde-aprender',
                 },
                 {
-                    name: 'A Tripulacao',
+                    name: 'Quero Ajudar',
                     link: '/tripulacao',
                 },
                 {

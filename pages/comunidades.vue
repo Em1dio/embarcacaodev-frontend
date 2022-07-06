@@ -1,13 +1,9 @@
 <template>
-    <div class="my-10 font-bold text-7xl text-white">
-        <e-span> Explore </e-span>
-        o desconhecido!
-    </div>
+    <div class="mt-1 mb-7 font-bold text-7xl text-white">Comunidades</div>
     <div class="my-10 font-normal text-4xl text-white">
-        Confira mares ja exploradas pelos Membros da Tripulação! 
+        Conheça comunidades e marujos que ja exploraram outros mares.
     </div>
+    <category-comunidades />
 </template>
 
-<script>
-
-</script>
+<script></script>

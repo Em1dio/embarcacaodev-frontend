@@ -1,7 +1,7 @@
 <template>
-    <div :class="`relative flex rounded-md items-center justify-center w-52 h-28 ${getBgColor}`">
+    <div :class="`relative flex rounded-md items-center justify-center w-56 h-28 ${getBgColor}`">
         <div>
-            <div :class="`${getColor}`">
+            <div :class="`text-center text-bold ${getColor}`">
                 <slot></slot>
             </div>
             <treasure-map class="treasure_map" />
@@ -46,5 +46,4 @@ export default {
     bottom: 10px;
     right: 10px;
 }
-
 </style>

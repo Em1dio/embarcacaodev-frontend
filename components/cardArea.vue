@@ -1,7 +1,10 @@
 <template>
     <div :class="`flex flex-col w-72 h-72 justify-between hover:w-78 hover:h-78 ${getBgColor}`">
         <div class="flex flex-col px-4 py-4">
-            <div :class="`${getColor} text-base font-normal font-oswald`">QUANDO QUISER!</div>
+            <div class="flex justify-between items-center">
+                <div :class="`${getColor} text-base font-bold font-oswald`">QUANDO QUISER!</div>
+                <div v-if="isNew" class="bg-fuchsia-500 text-white font-bold bourder-radius py-1 px-3 rounded-full uppercase"> new </div>
+            </div>
             <div class="mt-4">
                 <div :class="`${getColor} text-4xl font-bold`"><slot></slot></div>
             </div>
@@ -20,6 +23,10 @@ export default {
         cardType: {
             type: Number,
             default: 1,
+        },
+        isNew: {
+            type: Boolean,
+            default: false,
         },
     },
     computed: {

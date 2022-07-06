@@ -7,24 +7,15 @@
                 <e-span :color="index % 2 == 0 ? 'blue' : 'white'">{{ categoria.title }}</e-span>
             </div>
             <div class="flex flex-wrap m-2">
-                <button-treasure
-                    :color="index % 2 == 0 ? 'blue' : 'white'"
-                    class="mx-auto"
-                    v-for="(subcategoria, subIndex) in categoria.subCategorias"
-                    :key="subIndex"
-                    @click="abrirModal(subcategoria.title)"
-                >
-                    {{ subcategoria.title }}
-                </button-treasure>
+                <category-subarea :subCategorias="categoria.subCategorias" :indexCategoria="index" />
             </div>
         </div>
     </div>
-    <modal></modal>
+    <modal-materiais></modal-materiais>
 </template>
 
 <script>
 import { useStore } from '@/stores/conteudo';
-import { useModalStore } from '@/stores/modals';
 
 export default {
     mounted() {
@@ -33,15 +24,11 @@ export default {
     data() {
         return {
             store: useStore(),
-            modal: useModalStore(),
         };
     },
     methods: {
         getConteudo(area) {
             this.store.getResultBy(area);
-        },
-        abrirModal(title) {
-            this.modal.showModal(title);
         },
     },
     computed: {

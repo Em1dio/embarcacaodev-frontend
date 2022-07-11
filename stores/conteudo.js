@@ -1,10 +1,12 @@
 import { defineStore } from 'pinia'
 
-export const useStore = defineStore('conteudo', {
+export const conteudoStore = defineStore('conteudo', {
     state: () => {
-        return { 
-            info: {}, 
+        return {
+            info: {},
             areas: [],
+            assuntos: [],
+            selectedAssuntos: []
         }
     },
     actions: {
@@ -26,7 +28,7 @@ export const useStore = defineStore('conteudo', {
                                 },
                                 {
                                     title: 'HTML/CSS',
-                                    active: false,
+                                    active: true,
                                     id: '2',
                                 },
                                 {
@@ -36,7 +38,7 @@ export const useStore = defineStore('conteudo', {
                                 },
                                 {
                                     title: 'Versionamento/Git',
-                                    active: false,
+                                    active: true,
                                     id: '4',
                                 },
                             ],
@@ -135,7 +137,7 @@ export const useStore = defineStore('conteudo', {
             const areas = [
                 {
                     title: 'DEV. FRONTEND',
-                    assuntos: 1,
+                    assuntos: 3,
                     link: '/onde-aprender/frontend',
                     isNew: false
                 },
@@ -158,6 +160,61 @@ export const useStore = defineStore('conteudo', {
             ];
 
             this.areas = areas.filter(area => area.assuntos > 0);
+        },
+        getAssuntos(id) {
+            if(!id) {
+                this.selectedAssuntos = [];
+                this.assuntos = [];
+            }
+            const assuntos = [
+                {
+                    id: 1,
+                    assuntos: [
+                        {
+                            format: 'video',
+                            titulo: 'Como a Internet Funciona?',
+                            autor: 'Curso em Video',
+                            usuarios: ['daviprm', 'Willian91', 'caio-emidio'],
+                            link: "https://www.youtube.com/watch?v=nlO5hySqJFA"
+                        },
+                        {
+                            format: 'text',
+                            titulo: 'Entenda a Internet?',
+                            autor: 'Curso em Video',
+                            usuarios: ['caio-emidio'],
+                        },
+                    ]
+                },
+                {
+                    id: 2,
+                    assuntos: [
+                        {
+                            format: 'video',
+                            titulo: 'Projeto do curso de HTML e CSS feliz',
+                            autor: 'Marco Bruno',
+                            usuarios: ['daviprm', 'Willian91', 'caio-emidio'],
+                            link: "https://www.youtube.com/watch?v=CZPa3-1BKnY&list=PLirko8T4cEmzrH3jIJi7R7ufeqcpXYaLa"
+                        },
+                    ]
+                },
+                {
+                    id: 4,
+                    assuntos: [
+                        {
+                            format: 'video',
+                            titulo: 'Git & GitHub Para Iniciantes',
+                            autor: 'Willian Justen',
+                            usuarios: ['caio-emidio'],
+                            link: "https://www.youtube.com/watch?v=CZPa3-1BKnY&list=PLirko8T4cEmzrH3jIJi7R7ufeqcpXYaLa"
+                        },
+                    ]
+                }
+            ];
+
+            this.assuntos = assuntos;
+            const assunto = assuntos.find(item => item.id == id)?.assuntos;
+            console.log(id, assunto);
+            this.selectedAssuntos = assunto;
         }
     }
 })

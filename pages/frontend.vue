@@ -21,14 +21,14 @@
 </template>
 
 <script>
-import { useStore } from '@/stores/conteudo';
+import { conteudoStore } from '@/stores/conteudo';
 export default {
     mounted() {
         this.getConteudo('frontend');
     },
     data() {
         return {
-            store: useStore(),
+            store: conteudoStore(),
         };
     },
     methods: {

@@ -4,13 +4,13 @@ export const useModalStore = defineStore('showModal', {
   state: () => {
     return {
       showConteudoModal: false,
-      conteudo: {},
+      conteudo: { "title": "TITLE", "active": true, "id": "0" },
     }
   },
   actions:{
     showModal(conteudo){
-      this.showConteudoModal = true;
       this.conteudo = conteudo;
+      this.showConteudoModal = true;
     },
     closeModal(){
       this.showConteudoModal = false;

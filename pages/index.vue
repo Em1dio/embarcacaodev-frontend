@@ -11,7 +11,7 @@
             <div class="mt-10">
                 <nuxt-link to="onde-aprender" class="text-2xl hover:text-white-400">
                     <button
-                        class="transition delay-50 duration-200 ease-in-out p-5 bg-blue-900 text-xl font-bold text-white hover:text-blue-900 hover:bg-transparent border-2 hover:border-2 hover:border-blue-900"
+                        class="transition delay-50 duration-200 ease-in-out p-5 bg-blue-900 text-xl font-bold text-white hover:text-white hover:bg-transparent border-2"
                     >
                         Subir a bordo
                     </button>

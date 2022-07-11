@@ -1,0 +1,15 @@
+name = "embdev"
+type = "javascript"
+account_id = "784aa5226af7b89567215dc72936908a"
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2022-04-07"
+
+[site]
+bucket = ".output/public"
+entry-point = ".output"
+
+[build]
+command = "true"
+upload.format = "service-worker"

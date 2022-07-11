@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { useStore } from '@/stores/conteudo';
+import { conteudoStore } from '@/stores/conteudo';
 
 export default {
     mounted() {
@@ -24,7 +24,7 @@ export default {
     },
     data() {
         return {
-            conteudo: useStore(),
+            conteudo: conteudoStore(),
         };
     },
     computed: {

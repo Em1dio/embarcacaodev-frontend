@@ -6,7 +6,8 @@ export const conteudoStore = defineStore('conteudo', {
             info: {},
             areas: [],
             assuntos: [],
-            selectedAssuntos: []
+            selectedAssuntos: [],
+            id: 0,
         }
     },
     actions: {
@@ -162,7 +163,7 @@ export const conteudoStore = defineStore('conteudo', {
             this.areas = areas.filter(area => area.assuntos > 0);
         },
         getAssuntos(id) {
-            if(!id) {
+            if (!id) {
                 this.selectedAssuntos = [];
                 this.assuntos = [];
             }
@@ -216,5 +217,5 @@ export const conteudoStore = defineStore('conteudo', {
             console.log(id, assunto);
             this.selectedAssuntos = assunto;
         }
-    }
+    },
 })

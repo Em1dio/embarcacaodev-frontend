@@ -18,12 +18,13 @@
                 <div>{{ assunto.autor }}</div>
             </div>
         </div>
-        <div class="flex flex-row-reverse w-14 h-14">
+        <div class="flex items-center">
+            <div>Marujo(s):</div>
             <img
-                v-for="(usuario, index) in assunto.usuarios"
+                v-for="(marujo, index) in assunto.marujos"
                 :key="index"
-                class="rounded-full border-solid border-2 border-white avatar -ml-8"
-                :src="`https://github.com/${usuario}.png`"
+                class="w-14 rounded-full border-solid border-2 border-white -mr-4"
+                :src="`https://github.com/${marujo}.png`"
             />
         </div>
     </nuxt-link>

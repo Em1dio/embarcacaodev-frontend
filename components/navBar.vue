@@ -58,7 +58,7 @@ export default {
                 },
                 {
                     name: 'Quero Ajudar',
-                    link: '/tripulacao',
+                    link: '/quero-ajudar',
                 },
                 {
                     name: 'Comunidades',

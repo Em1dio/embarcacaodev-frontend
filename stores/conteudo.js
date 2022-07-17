@@ -97,8 +97,8 @@ export const conteudoStore = defineStore('conteudo', {
                                 },
                                 {
                                     title: 'Versionamento/Git',
-                                    active: false,
-                                    link: '#',
+                                    active: true,
+                                    id: '4',
                                 },
                             ],
                         },
@@ -175,14 +175,14 @@ export const conteudoStore = defineStore('conteudo', {
                             format: 'video',
                             titulo: 'Como a Internet Funciona?',
                             autor: 'Curso em Video',
-                            usuarios: ['daviprm', 'Willian91', 'caio-emidio'],
+                            marujos: ['daviprm', 'Willian91', 'caio-emidio'],
                             link: "https://www.youtube.com/watch?v=nlO5hySqJFA"
                         },
                         {
                             format: 'text',
                             titulo: 'Entenda a Internet?',
                             autor: 'Curso em Video',
-                            usuarios: ['caio-emidio'],
+                            marujos: ['caio-emidio'],
                         },
                     ]
                 },
@@ -193,7 +193,7 @@ export const conteudoStore = defineStore('conteudo', {
                             format: 'video',
                             titulo: 'Projeto do curso de HTML e CSS feliz',
                             autor: 'Marco Bruno',
-                            usuarios: ['daviprm', 'Willian91', 'caio-emidio'],
+                            marujos: ['daviprm', 'Willian91', 'caio-emidio'],
                             link: "https://www.youtube.com/watch?v=CZPa3-1BKnY&list=PLirko8T4cEmzrH3jIJi7R7ufeqcpXYaLa"
                         },
                     ]
@@ -205,7 +205,7 @@ export const conteudoStore = defineStore('conteudo', {
                             format: 'video',
                             titulo: 'Git & GitHub Para Iniciantes',
                             autor: 'Willian Justen',
-                            usuarios: ['caio-emidio'],
+                            marujos: ['torvalds', 'gabrielcasag'],
                             link: "https://www.youtube.com/watch?v=CZPa3-1BKnY&list=PLirko8T4cEmzrH3jIJi7R7ufeqcpXYaLa"
                         },
                     ]

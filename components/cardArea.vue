@@ -3,7 +3,7 @@
         <div class="flex flex-col px-4 py-4">
             <div class="flex justify-between items-center">
                 <div :class="`${getColor} text-base font-bold font-oswald`">QUANDO QUISER!</div>
-                <div v-if="isNew" class="bg-fuchsia-500 text-white font-bold bourder-radius py-1 px-3 rounded-full uppercase"> new </div>
+                <div v-if="isNew" class="bg-fuchsia-500 text-white font-bold py-1 px-3 rounded-full uppercase"> new </div>
             </div>
             <div class="mt-4">
                 <div :class="`${getColor} text-4xl font-bold`"><slot></slot></div>

@@ -6,11 +6,9 @@
         "generate": "nuxt generate",
         "preview": "nuxt preview"
     },
-    "dependencies": {},
-    "devDependencies": {
+    "dependencies": {
         "@nuxtjs/tailwindcss": "^5.1.2",
-        "@pinia/nuxt": "^0.1.9",
-        "pinia": "^2.0.14",
+        "@pinia/nuxt": "^0.3.0",
         "nuxt": "^3.0.0-rc.6"
     }
 }

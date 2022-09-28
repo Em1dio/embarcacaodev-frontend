@@ -4,21 +4,17 @@ import { defineNuxtConfig } from 'nuxt';
 export default defineNuxtConfig({
     modules: ['@nuxtjs/tailwindcss'],
     nitro: {
-        preset: 'node-server',
+        output: {
+            dir: 'output',
+            serverDir: 'output/server',
+            publicDir: 'output/public',
+        },
     },
     theme: {
         extend: {
             backgroundImage: {
                 boat: "url('/img/boat.png')",
             },
-        },
-        fontFamily: {
-            sans: ['roboto'],
-            serif: ['roboto'],
-            mono: ['roboto'],
-            display: ['roboto'],
-            body: ['roboto'],
-            oswald: ['oswald'],
         },
     },
     buildModules: ['@pinia/nuxt'],

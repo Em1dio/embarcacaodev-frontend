@@ -4,7 +4,7 @@ import { defineNuxtConfig } from 'nuxt';
 export default defineNuxtConfig({
     modules: ['@nuxtjs/tailwindcss'],
     nitro: {
-        preset: 'cloudflare_pages',
+        preset: 'node-server',
     },
     theme: {
         extend: {

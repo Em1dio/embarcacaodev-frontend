@@ -2,17 +2,10 @@ import { defineNuxtConfig } from 'nuxt';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-    modules: ['@nuxtjs/tailwindcss'],
     nitro: {
         preset: 'node-server',
     },
-    theme: {
-        extend: {
-            backgroundImage: {
-                boat: "url('/img/boat.png')",
-            },
-        },
-    },
+    modules: ['@nuxtjs/tailwindcss'],
     buildModules: ['@pinia/nuxt'],
     link: [
         {

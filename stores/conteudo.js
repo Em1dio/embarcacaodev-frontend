@@ -175,14 +175,7 @@ export const conteudoStore = defineStore('conteudo', {
                             format: 'video',
                             titulo: 'Como a Internet Funciona?',
                             autor: 'Curso em Video',
-                            marujos: ['daviprm', 'Willian91', 'caio-emidio'],
                             link: "https://www.youtube.com/watch?v=nlO5hySqJFA"
-                        },
-                        {
-                            format: 'text',
-                            titulo: 'Entenda a Internet?',
-                            autor: 'Curso em Video',
-                            marujos: ['caio-emidio'],
                         },
                     ]
                 },

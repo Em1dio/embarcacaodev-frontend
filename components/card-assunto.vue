@@ -1,31 +1,26 @@
 <template>
-    <nuxt-link class="flex m-2 p-1 bg-blue-100 rounded-full justify-between" :to="assunto.link" target="_blank">
-        <div class="flex item-center">
-            <div
-                v-if="assunto.format === 'video'"
-                class="border-solid border-2 border-white w-14 h-14 bg-red-900/50 p-3 rounded-full flex justify-center hover:bg-red-900"
-            >
-                <icon-video></icon-video>
+    <nuxt-link class="flex bg-blue-100 w-56 rounded-xl p-2 m-2 group" :to="assunto.link" target="_blank">
+        <div class="flex flex-col">
+            <div v-if="assunto.format === 'video'" class="flex items-center gap-2">
+                <div
+                    class="border-solid border-2 border-white w-14 h-14 bg-red-900/50 p-3 rounded-full flex justify-center group-hover:bg-red-900"
+                >
+                    <icon-video></icon-video>
+                </div>
+                <div class="text-xl font-bold text-red-900">Video</div>
             </div>
-            <div
-                v-if="assunto.format === 'text'"
-                class="border-solid border-2 border-white w-14 h-14 bg-blue-900/50 p-3 rounded-full flex justify-center hover:bg-blue-900"
-            >
-                <icon-text></icon-text>
+            <div v-if="assunto.format === 'text'" class="flex items-center gap-2">
+                <div
+                    class="border-solid border-2 border-white w-14 h-14 bg-blue-900/50 p-3 rounded-full flex justify-center group-hover:bg-blue-900"
+                >
+                    <icon-text></icon-text>
+                </div>
+                <div class="text-xl font-bold text-blue-900">Blog</div>
             </div>
-            <div class="ml-4">
-                <div class="font-bold">{{ assunto.titulo }}</div>
+            <div class="ml-1">
+                <div class="font-bold text-base">{{ assunto.titulo }}</div>
                 <div>{{ assunto.autor }}</div>
             </div>
-        </div>
-        <div class="flex items-center">
-            <div>Marujo(s):</div>
-            <img
-                v-for="(marujo, index) in assunto.marujos"
-                :key="index"
-                class="w-14 rounded-full border-solid border-2 border-white -mr-4"
-                :src="`https://github.com/${marujo}.png`"
-            />
         </div>
     </nuxt-link>
 </template>

@@ -1,4 +1,4 @@
-import { defineStore,acceptHMRUpdate } from 'pinia'
+import { defineStore } from 'pinia'
 
 export const useStore = defineStore('storeId', {
   // arrow function recommended for full type inference

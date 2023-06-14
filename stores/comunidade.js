@@ -25,17 +25,11 @@ export const comunidadeStore = defineStore('comunidade', {
           link: 'https://discord.com/invite/FP5UaAG',
         },
         {
-          image: 'https://github.com/egermano.png',
-          title: 'Bruno Germano',
-          description: 'A Comunidade do Bruno Germano',
-          link: 'https://discord.com/invite/3UKZT7cVWG',
-        },
-        {
-          image: 'https://cdn.discordapp.com/icons/911067021209391135/a_bb2ddbaa127ccfacaee6dd93b20e2743.webp?size=96',
-          title: 'GabiCodes',
-          description: 'A Comunidade da GabiCode',
-          link: 'https://discord.com/invite/gabicode',
-        },
+          image: 'https://github.com/forjadev.png',
+          title: 'Forja Dev',
+          description: 'A Comunidade da Forja Dev',
+          link: 'https://discord.gg/forja',
+        }
       ]
 
       this.comunidades = data;
